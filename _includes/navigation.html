@@ -1,0 +1,25 @@
+<ul class="navbar-nav flex-column text-left">
+    {% for item in site.data.navigation %}
+        <li class="nav-item {% if page.url == item.link %}active{% endif %}">
+            <a class="nav-link" href="{{ item.link }}">
+                <svg 
+                    class="svg-inline--fa fa-{{ item.icon }} fa-w-14 fa-fw mr-2" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    data-prefix="fas" 
+                    data-icon="{{ item.icon }}" 
+                    role="img" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="{{ item.viewbox }}" 
+                    data-fa-i2svg="">
+                    <path 
+                        fill="currentColor" 
+                        d="{{ item.path }}">
+                    </path>
+                </svg>
+                <!-- <i class="fas fa-{{ item.icon }} fa-fw mr-2"></i> -->
+                {{ item.name }}<span class="sr-only">{% if page.url == item.link %}(current){% endif %}</span>
+            </a>
+        </li>
+    {% endfor %}
+</ul>
