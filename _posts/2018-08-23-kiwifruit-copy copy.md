@@ -1,7 +1,7 @@
 ---
 layout: post
 author: ted
-title: Heading Perspiciatis Unde Omnis6
+title: Heading Perspiciatis Unde Omnis7
 img: /assets/images/blog/blog-post-thumb-9.jpg
 ---
 Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible

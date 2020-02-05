@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Contact
+javascript1: /assets/js/email.min.js
+javascript2: /assets/js/email.init.js
+javascript3: /assets/js/email.code.js
 ---
 <section class="cta-section theme-bg-light py-5">
     <div class="container text-center single-col-max-width">
@@ -29,11 +32,12 @@ title: Contact
 <section class="contact-section px-3 py-5 p-md-5">
     <div class="container">
         <form id="contact-form" class="contact-form col-lg-8 mx-lg-auto" method="post" action="" novalidate="novalidate">
+            <input type="hidden" name="contact_number">
             <h3 class="text-center mb-3">Get In Touch</h3>
             <div class="form-row">                                                           
                 <div class="form-group col-md-6">
                     <label class="sr-only" for="cname">Name</label>
-                    <input type="text" class="form-control" id="cname" name="name" placeholder="Name" minlength="2" required="" aria-required="true">
+                    <input type="text" class="form-control" id="cname" name="from_name" placeholder="Name" minlength="2" required="" aria-required="true">
                 </div>                    
                 <div class="form-group col-md-6">
                     <label class="sr-only" for="cemail">Email</label>

@@ -1,11 +1,13 @@
 ---
 layout: default
 title: Blog
+pagination: 
+    enabled: true
 ---
 
 <section class="blog-list px-3 py-5 p-md-5">
 	<div class="container">
-		{% for post in site.posts %}
+		{% for post in paginator.posts %}
 			<div class="item mb-5">
 				<div class="media">
 					<img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="{{ post.img }}" alt="image">
@@ -18,11 +20,19 @@ title: Blog
 				</div><!--//media-->
 			</div><!--//item-->
 		{% endfor %}
-				
-		<nav class="blog-nav nav nav-justified my-5">
-			<a class="nav-link-prev nav-item nav-link rounded-left" href="index.html">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
-			<a class="nav-link-next nav-item nav-link rounded-right" href="blog-list.html">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
-		</nav>
+		
+		{% if paginator.total_pages > 1 %}
+			<nav class="blog-nav nav nav-justified my-5">
+				{% if paginator.previous_page %}
+					<a class="nav-link-prev nav-item nav-link rounded-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Previous<i class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+				{% endif %}
+				{% if paginator.next_page %}
+					<a class="nav-link-next nav-item nav-link rounded-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next<i class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+				{% endif %}
+			</nav>
+		{% endif %}
+
+  		<p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 		
 	</div>
 </section>

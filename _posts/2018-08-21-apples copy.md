@@ -1,7 +1,7 @@
 ---
 layout: post
 author: avazbe
-title: Heading Duis Arcu Tortor2
+title: Heading Duis Arcu Tortor1
 img: /assets/images/blog/blog-post-thumb-8.jpg
 ---
 An apple is a sweet, edible fruit produced by an apple tree.

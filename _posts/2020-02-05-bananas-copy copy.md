@@ -1,7 +1,7 @@
 ---
 layout: post
 author: avazbe
-title: Heading Lorem Ipsum Dolor Sit Amet14
+title: Heading Lorem Ipsum Dolor Sit Amet15
 img: /assets/images/blog/blog-post-thumb-7.jpg
 ---
 A banana is an edible fruit – botanically a berry – produced by several kinds
