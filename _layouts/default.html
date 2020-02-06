@@ -18,6 +18,12 @@
     
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="/assets/css/theme-1.css">
+
+    <!-- CSS file of the page -->    
+    {% if page.style1 %}<link rel="stylesheet" href="{{ page.style1 }}"></script>{% endif %}
+    {% if page.style2 %}<link rel="stylesheet" href="{{ page.style2 }}"></script>{% endif %}
+    {% if page.style3 %}<link rel="stylesheet" href="{{ page.style3 }}"></script>{% endif %}
+
     {% feed_meta %}
     {% seo %}
 </head> 
