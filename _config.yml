@@ -1,14 +1,7 @@
-pagination:
-  enabled: true
-  per_page: 6
-  offset: 0
-  permalink: '/page/:num/'
-  title: ':title - page :num of :max'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
+paginate: 6
+paginate_path: "/blog/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-paginate-v2
+  - jekyll-paginate
